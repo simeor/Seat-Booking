@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Righteous', cursive;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 100vh;
+    z-index: 3;
+    position:relative;
+    overflow: hidden;
+
+}
+
+
+
+
+
+h1{
+    font-family: 'Righteous', cursive;
+    background-color: #fc5185;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    top:-22px;
+    left: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-container {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+
+}
+
+.movie-container label {
+    font-weight: 1000;
+    font-size: 22px;
+}
+
+
+
+.movie-container select {
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 12px;
+    padding: 10px 10px;
+    appearance: none;
+    color: #fc5185;
+    font-weight: bold;
+    height: 30px;
+    margin-top: 5px;
+    
+}
+
+
+
+.seat {
+    background-color: #fff;
+    height: 24px;
+    width: 30px;
+    margin: 6px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+     border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: 0px 2px 10px 2px #8888;
+}
+
+.seat.selected {
+    background-color: #fc5185;
+}
+
+.seat.occupied {
+    background-color: #a1eafb;
+}
+
+
+.row {
+    display: flex;
+}
+
+.seat:nth-of-type(2) {
+    margin-right: 30px;
+}
+
+.seat:nth-last-of-type(2) {
+    margin-left: 30px;
+}
+
+.showcase.seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1.2);
+}
+
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    background-color: #fc5185;
+    transition: all 0.5s ease;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+}
+
+.seat.occupied:hover{
+ transform: scale(1.2);
+    background-color: #000;
+    transition: all 0.5s ease;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    box-shadow: none;
+}
+
+.seat.booked{
+    background-color: orange;
+}
+
+.showcase {
+    
+    padding: 5px 10px;
+    color: #fff;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.showcase .seat {
+    border-radius: 50%;
+    box-shadow: none;
+}
+
+
+.showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.showcase li small {
+    margin-left: 3px;
+}
+
+.container {
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+.screen {
+    background-color: #fff;
+    height: 150px;
+    width: 100%;
+    margin: 10px 0 15px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 12px 10px rgba(225, 225, 225, 0.7);
+    animation-name: screen;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition: all 1s ease;
+    background-image: url('media/giphy.gif');
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    border: 1px solid #fc5185;
+    cursor: pointer;
+}
+
+
+.screen:hover{
+  transform: rotateX(0deg);
+  height: 200px;
+    width: 400px;
+    margin: 400%;
+    border: 50px solid #fc5185;
+}
+
+
+
+
+
+
+.screen:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.3;
+}
+
+
+
+p.text span {
+    color: #fc5185;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+.payment{
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    color: black;
+    overflow: hidden;
+    transition: all 1s 1s ease;
+    opacity: 0;
+    
+   
+}
+
+
+.payment.conatiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    margin: auto;
+}
+
+
+
+input, payment {
+    color: black;
+   display: block;
+    font-size:11px;
+    padding:4px 2px;
+    border:solid 2px #fc5185;
+    border-radius: 12px;
+    width:100%;
+    margin:10px 0 10px 10px;
+    text-align: center;
+}
+
+
+
+
+@keyframes screen {
+    from {
+        box-shadow: 0px 10px 10px rgba(225, 225, 225, 0.7);
+    }
+
+    to {
+       box-shadow: 0px 17px 35px rgba(225, 225, 225, 1); 
+    }
+
+    from {
+        background-color: #fffc;
+    }
+
+    to {
+        background-color: #fff;
+    }
+
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.8;
+    }
+
+     
+}

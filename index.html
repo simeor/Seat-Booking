@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel='stylesheet'>
+    <title>Seat Booking</title>
+</head>
+<body>
+
+
+<!--Top Section-->
+
+<h1>WELCOME TO MY CULT CINEMA</h1>
+ 
+ <div class="movie-container">
+     <label>What do you want to watch ? </label>
+     <select id="movie">
+         <option value="10">Serial Mom 🔪 (£10)</option>
+         <option value="15">Pink Flamingos 🌈 (£15)</option>
+         <option value="5">Blue Velvet 🕵️‍ ( £5 Deal )</option>
+         <option value="20">La Traviata Live Stream  🍿 (£20)</option>
+     </select>
+ </div>
+  
+
+    <ul class="showcase">
+
+     <li>
+      <div class="seat"> </div>
+          <small>Free</small>
+    
+     </li>
+     
+     <li>
+      <div class="seat selected"></div>
+          <small>Selected</small>
+      
+     </li>
+     
+     <li>
+      <div class="seat occupied"> </div>
+          <small>Damn! This Is Taken</small>
+     
+     </li>
+     </ul>
+  
+     <!--Seats Section-->   
+      
+     <div class="container">
+         <div class="screen"></div>
+         
+       <div class="row">
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+       </div>
+       
+         <div class="row">
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat occupied"></div>
+           <div class="seat occupied"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+       </div>
+       
+         <div class="row">
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat occupied"></div>
+           <div class="seat occupied"></div>
+       </div>
+       
+         <div class="row">
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat occupied"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+       </div>
+       
+         <div class="row">
+           <div class="seat occupied"></div>
+           <div class="seat occupied"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+       </div>
+       
+         <div class="row">
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat occupied"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat occupied"></div>
+           <div class="seat occupied"></div>
+       </div>
+       
+       <p class="text">You have selected <span id="count">0</span> seats for a price of £ <span id="total">0</span></p>
+       
+       
+        <button id="btn">Reserve Seats</button>
+        
+         
+     </div>
+      
+      <!--Pay Section--> 
+      
+      
+    <div class="payment">
+       <div class="conatiner">
+        <h2>Time To Pay</h2>
+        <form>
+        <label>Email:</label>
+        <input type="email" value=""/>
+        <br>
+         <label>Name:</label>
+        <input type="text" value=""/>
+        <br>
+        <label>Card Number:</label>
+        <input type="password" value=""/>
+        </form>
+        </div>
+    </div>
+ 
+ 
+<script src="script.js"></script> 
+</body>
+</html>
+
+
+
+
