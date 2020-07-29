@@ -71,7 +71,7 @@ h1{
     appearance: none;
     color: #fc5185;
     font-weight: bold;
-    height: 30px;
+    height: 50px;
     margin-top: 5px;
     
 }
@@ -257,7 +257,7 @@ input, payment {
     color: black;
    display: block;
     font-size:11px;
-    padding:4px 2px;
+    padding:10px 2px;
     border:solid 2px #fc5185;
     border-radius: 12px;
     width:100%;
