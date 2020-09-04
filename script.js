@@ -34,9 +34,6 @@ function updateSelectedCount() {
     const selectedSeats = document.querySelectorAll('.row .seat.selected');
 
 
-
-
-
     // add up cost and total seats
     const selectedSeatsCount = selectedSeats.length;
     count.textContent = selectedSeatsCount;
@@ -53,23 +50,14 @@ movieSelect.addEventListener('change', function (e) {
 })
 
 
-
-
-
 // Seat click -Event
 container.addEventListener('click', function (e) {
 
     if (e.target.classList.contains('seat') && !e.target.classList.contains('occupied')) {
-
         // select chair toggle
         e.target.classList.toggle('selected');
-
-
         updateSelectedCount();
     }
-
-
-
 
 });
 
@@ -78,10 +66,8 @@ container.addEventListener('click', function (e) {
 // btn Reserve click -Event
 
 document.getElementById('btn').addEventListener('click', function () {
-
     const selectedSeat = document.querySelectorAll('.row .seat.selected');
     const bookedSeat = [...selectedSeat]
-    
     //Booking btn
 
     if (selectedSeat.length < 1) {
@@ -95,7 +81,4 @@ document.getElementById('btn').addEventListener('click', function () {
            
         })
     }
-
-         
-
 })
